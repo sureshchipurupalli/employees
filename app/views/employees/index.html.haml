@@ -1,0 +1,50 @@
+%p#notice= notice
+#contact.container-fluid.bg-grey
+  .container-full
+    %h1 Employees List
+    %table.table.table-hover
+      %thead
+        %tr
+          %th name
+          <td colspan="2",style="background-color:lavender;">
+          %th dateofbirth
+          <td colspan="2",style="background-color:lavenderblush;">
+          %th age
+          %td{:colspan => "2"}
+          %th gender
+          %td{:colspan => "2"}
+          %th designation
+          %td{:colspan => "2"}
+          %th salary
+          %td{:colspan => "2"}
+          %th bloodgroup
+          %td{:colspan => "2"}
+          %th mobile
+          %td{:colspan => "2"}
+      %tbody
+        - @employee.each do |employee|
+          %tr
+            %td= employee.name
+            %td{:colspan => "2"}
+            %td= employee.dateofbirth
+            %td{:colspan => "2"}
+            %td= employee.age
+            %td{:colspan => "2"}
+            %td= employee.gender
+            %td{:colspan => "2"}
+            %td= employee.designation
+            %td{:colspan => "2"}
+            %td= employee.salary
+            %td{:colspan => "2"}
+            %td= employee.bloodgroup
+            %td{:colspan => "2"}
+            %td= employee.mobile
+            %td{:colspan => "2"}
+            %td= link_to 'Show', employee ,:class => "btn btn-success"
+            %td= link_to 'Edit', edit_employee_path(employee),class: "btn btn-primary"
+            %td= link_to 'Delete', employee, method: :delete, data: { confirm: 'Are you sure?' },:class => 'btn btn-large btn-danger'
+    %br
+      = link_to 'New Employee', new_employee_path,class: "btn btn-primary"
+
+
+      = link_to "download into excel", employees_path(format: "xls"),class: "btn btn-primary"

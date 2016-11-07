@@ -1,0 +1,8 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Employees") do |sheet|
+    sheet.add_row ["name", "DOB","Age","Gender","Designation","Salary","blood group","Mobile"]
+    @employees.each do |employee|
+        sheet.add_row [employee.name, employee.dateofbirth,employee.age,employee.gender,employee.designation,employee.salary,employee.bloodgroup,employee.mobile]
+    end
+    send_data p.to_stream.read, type: "application/xlsx", filename: "filename.xlsx"
+end

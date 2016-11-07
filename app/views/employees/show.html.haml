@@ -1,0 +1,37 @@
+/ Container (Pricing Section)
+#pricing.container-fluid
+  .text-center
+    %h1 Welcome
+  .row.slideanim
+    .col-sm-12.col-xs-12
+      .panel.panel-default.text-center
+        .panel-heading
+          %h2 Employee Details
+        %p
+          %h4.list-group-item-heading Name
+          %p.list-group-item-text= @employee.name
+        %p
+          %h4.list-group-item-heading Employee date of birth
+          %p.list-group-item-text= @employee.dateofbirth
+        %p
+          %h4.list-group-item-heading Employee age
+          %p.list-group-item-text= @employee.age
+        %p
+          %h4.list-group-item-heading Employee Gender
+          %p.list-group-item-text= @employee.gender
+        %p
+          %h4.list-group-item-heading Employee Designation
+          %p.list-group-item-text= @employee.designation
+        %p
+          %h4.list-group-item-heading Employee Salary
+          %p.list-group-item-text= @employee.salary
+        %p
+          %h4.list-group-item-heading Employee Blood_Group
+          %p.list-group-item-text= @employee.bloodgroup
+        %p
+          %h4.list-group-item-heading Employee mobile number
+          %p.list-group-item-text= @employee.mobile
+      .panel-footer
+        = link_to 'Edit', edit_employee_path(@employee), :class => "btn btn-success"
+
+        =link_to 'Back', employees_path ,class: "btn btn-primary"

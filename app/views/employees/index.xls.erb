@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:o="urn:schemas-microsoft-com:office:office"
+          xmlns:x="urn:schemas-microsoft-com:office:excel"
+          xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">name</Data></Cell>
+        <Cell><Data ss:Type="String">dateofbirth</Data></Cell>
+        <Cell><Data ss:Type="String">age</Data></Cell>
+        <Cell><Data ss:Type="String">gender</Data></Cell>
+        <Cell><Data ss:Type="String">designation</Data></Cell>
+        <Cell><Data ss:Type="String">salary</Data></Cell>
+        <Cell><Data ss:Type="String">bloodgroup</Data></Cell>
+        <Cell><Data ss:Type="String">mobile</Data></Cell>
+      </Row>
+      <% @employee.each do |employee| %>
+          <Row>
+            <Cell><Data ss:Type="String"><%= employee.name %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= employee.dateofbirth %></Data></Cell>
+            <Cell><Data ss:Type="Integer"><%= employee.age %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= employee.gender %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= employee.designation %></Data></Cell>
+            <Cell><Data ss:Type="Float"><%= employee.salary %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= employee.bloodgroup %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= employee.mobile %></Data></Cell>
+          </Row>
+      <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

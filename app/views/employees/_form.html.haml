@@ -1,0 +1,63 @@
+%link{:href => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css", :rel => "stylesheet"}/
+%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"}
+.border-form-div
+
+  = form_for(@employee) do |f|
+    = form_for(@employee, html: { role: "form" }) do |f|
+      - if @employee.errors.any?
+        #error_explanation
+          %h3
+            = pluralize(@employee.errors.count, "error")
+            prohibited this employee from being saved:
+          %ul
+            - @employee.errors.full_messages.each do |message|
+              %li
+                = message
+      .form-group
+        = f.label :name
+        = f.text_field :name, autofocus: true, class: "form-control"
+      .form-group
+        = f.label :dateofbirth
+        = f.text_field :dateofbirth, :id => "datepicker", class: "form-control"
+
+      #age.checked
+      .form-group
+        = f.label :age
+        = f.text_field :age, :id => "employee_age", autocomplete: "off", class: "form-control"
+      .form-group
+        = f.label :gender
+        = f.text_field :gender, :id => "datepicker", class: "form-control"
+      .form-group
+        = f.label :designation
+        = f.text_field :designation, autocomplete: "off", class: "form-control"
+      .form-group
+        = f.label :salary
+        = f.text_field :salary, autocomplete: "off", class: "form-control"
+      .form-group
+        = f.label :bloodgroup
+        = f.text_field :bloodgroup, autocomplete: "off", class: "form-control"
+
+      .form-group
+        = f.label :mobile
+        = f.text_field :mobile, autocomplete: "off", class: "form-control"
+      = f.submit  t('.sign_in', :default => "submit"), class: "btn btn-primary"
+      %br
+      %br
+  = link_to "All Employees",  employees_path, :class => "btn btn-success"
+
+
+
+:javascript
+  $('#datepicker').datepicker({
+     onSelect: function(value, ui) {
+      var today = new Date(),
+          age = today.getFullYear() - ui.selectedYear;
+       $("#employee_age").val(age);
+    },
+    maxDate: '+0d',
+    changeMonth: true,
+    changeYear: true,
+    defaultDate: '-18yr',
+    yearRange: '1950:2013',
+  });
