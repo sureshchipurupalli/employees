@@ -1,0 +1,6 @@
+.FLOAT_RIGHT
+  - if current_user
+    %h2
+      Welcome
+    = succeed "\u{a0}|\u{a0}" do
+      %b{:style => "color: #38761d;"}= current_user.name || current_user.email

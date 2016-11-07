@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dateofbirth: MyString
+  age: 1
+  designation: MyString
+  mobile: MyString
+  gender: MyString
+  salary: 1.5
+  bloodgroup: MyString
+
+two:
+  name: MyString
+  dateofbirth: MyString
+  age: 1
+  designation: MyString
+  mobile: MyString
+  gender: MyString
+  salary: 1.5
+  bloodgroup: MyString

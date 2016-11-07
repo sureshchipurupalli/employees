@@ -15,3 +15,13 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+//= require bootstrap
+//= require jquery
+//= require jquery-ui
+//= require jquery_ujs
+//= require bootstrap-sprockets
+//= require turbolinks
+//= require_tree .
+
+//$('.dropdown-toggle').dropdown()

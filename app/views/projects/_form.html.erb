@@ -1,0 +1,20 @@
+<div id="project_container">
+  <%= form_for @projects, remote: true do |f| %>
+      <ul class="error_messages hide"></ul>
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name, :class => 'form-control' %>
+      </div>
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_area :description, :class => 'form-control' %>
+      </div>
+      <div class="action">
+        <button class="btn btn-success" id="all_buttons" style="font-weight: bold; position: relative; left: 148px; top: 10px" type="submit">
+          <!-- %i{:class => "fa fa-plus-circle"}
+          -->
+          Add Project
+        </button>
+      </div>
+  <% end %>
+</div>

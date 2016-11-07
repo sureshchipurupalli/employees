@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-offset-1">
+      <div class="col-md-10">
+        <center>
+          <h3>
+            <b>Listing projects</b>
+          </h3>
+        </center>
+        <h4>
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th></th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @projects.each do |project| %>
+                <tr>
+                  <td>
+                    <%= project.name %>
+                  </td>
+                  <td>
+                    <%= project.description %>
+                  </td>
+                  <td>
+                    <a href="<%= edit_project_path(project) %>">
+                      <i class="btn btn-warning fa fa-pencil-square"></i>
+                    </a>
+                  </td>
+
+                </tr>
+            <% end %>
+            </tbody>
+
+          </table>
+          <br>
+          <a class="btn btn-primary" href="<%= new_project_path %>" id="all_buttons">New Project </a>
+
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>

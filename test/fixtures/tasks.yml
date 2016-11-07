@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_name: MyString
+  description: MyText
+  project_name: MyString
+  status: 1
+  deleted: false
+
+two:
+  task_name: MyString
+  description: MyText
+  project_name: MyString
+  status: 1
+  deleted: false

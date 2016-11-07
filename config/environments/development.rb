@@ -1,4 +1,5 @@
 Rails.application.configure do
+  #require 'tlsmail'
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -21,6 +22,7 @@ Rails.application.configure do
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
+  config.action_mailer.delivery_method = :smtp
 
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
@@ -29,16 +31,18 @@ Rails.application.configure do
 
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
-    port: 587,
-    domain: Rails.application.secrets.domain_name,
+    port:  587,
+    domain:   "railscasts.com",
     authentication: "plain",
+
     enable_starttls_auto: true,
-    user_name: Rails.application.secrets.email_provider_username,
-    password: Rails.application.secrets.email_provider_password
+    user_name: "suresh.ch471@gmail.com",
+    password:  "suresh@1993",
+    openssl_verify_mode: 'none'
   }
   # ActionMailer Config
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.action_mailer.delivery_method = :smtp
+
   config.action_mailer.raise_delivery_errors = true
   # Send email in development mode?
   config.action_mailer.perform_deliveries = true

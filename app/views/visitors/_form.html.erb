@@ -1,0 +1,100 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <h2>
+      <b>
+          Register Timer
+      </b>
+    </h2>
+    <h5>
+      <%= form_for :register_time, :html => { :method => :post}, :url => {:action => 'create'} do |f| %>
+          <div class="form-group">
+            <div class="col-xs-4">
+              <%= f.text_field :datepicker, class: "form-control", id: "datepicker", :required => true %>
+            </div>
+            <div class="col-xs-4">
+
+              <%= f.select(:project, options_for_select(@project_names.collect{|project_name|[project_name.name, {:value => project_name.name}]}), {:include_blank => "--Select projects--"}, {class: "form-control", :id => "project_list", :required => true}) %>
+
+            </div>
+            <div class="col-xs-4">
+              <%= f.select(:task, options_for_select(@task_names.collect{|task_name|[task_name.task_name, {:value => task_name.task_name}]}), {:include_blank => "--Related Tasks--"}, {class: "form-control", :id => "task_list", :required => true}) %>
+            </div>
+          </div>
+          <br>
+
+
+          <br>
+
+
+
+            <div class="col-xs-4">
+              <input id="hidden_current_user" type="hidden" value="<%= current_user.name %>"> </input>
+
+              <select class="form-control" id="current_user_name" required="<%= true %>"></select>
+
+            </div>
+            <div class="col-xs-4">
+              <div class="col-md-4">
+                <%= f.text_field :hours_count, class: "form-control", placeholder: "hh", :required => true %>
+              </div>
+              <div class="col-md-4">
+                <%= f.text_field :minutes_count, class: "form-control", placeholder: "mm" %>
+              </div>
+              <div class="col-md-4">
+                <%= f.text_field :money_count, class: "form-control", placeholder: "ss" %>
+              </div>
+
+
+            </div>
+            <div class="col-xs-4">
+              <%= f.check_box :billed, {class: "billed"}, "billed" %>
+              Already billed
+            </div>
+
+
+          <br>
+          <br>
+          </form>
+
+
+          <div class="row">
+
+            <div class="col-xs-12">
+            <div class="col-xs-10">
+              <%= f.text_area :about_period, cols: 80, rows: 1, class: 'form-control', placeholder: "Notes",:style => "height:50px;" %>
+            </div>
+            <div class="col-xs-2">
+              <button class="btn btn-success" id="all_buttons"  type="submit">Save</button>
+            </div>
+              </div>
+
+          </div>
+      <% end %>
+    </h5>
+  </div>
+</div>
+</div>
+</div>
+
+
+<script>
+  $('#datepicker').datepicker("update", new Date());
+  $('#project_list').change(function(){
+    $('#task_list').prop('disabled', true);
+    $.ajax({
+      type: "POST",
+      dataType: 'script',
+      url: "/home/project_tasks",
+      data: "project_name="+ document.getElementById('project_list').value
+    });
+  });
+  $(document).ready(function(){
+    $.ajax({
+      type: "POST",
+      dataType: 'script',
+      url: "/home/pick_user",
+      data: "current_user_name="+ document.getElementById('hidden_current_user').value
+    });
+  });
+</script>

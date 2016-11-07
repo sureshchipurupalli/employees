@@ -1,0 +1,237 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600|Orbitron);
+
+body{
+  font-family: 'Courgette', cursive;
+  background-color: #f4f4ff;
+}
+.caret{
+    margin-top: 10px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000000;
+}
+.dropdwn{
+  padding-left: 15px;
+}
+#welcome_span{
+  padding-top: 15px;
+  padding-right: 5px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+#all_buttons{
+  font-size: 20px;
+}
+
+.error_messages{
+  color: red;
+}
+.hide{
+  display: none;
+}
+
+.navbar{
+  background-color: #f4be93;
+}
+.navbar-header{
+  .navbar-brand {
+    color: #48340d;
+    font-size: 24px;
+  }
+  li > a{
+    color: white;
+  }
+}
+
+
+
+.footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+  font-size: small;
+  margin-top: 70px;
+  padding: 30px 0;
+  text-align: center;
+}
+.span1_5 {
+  width: 105px;
+}
+h3.title, div.title {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+h4.title {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-bottom: 5px;
+}
+.title .edit {
+  font-size: small;
+  font-style: italic;
+  margin-left: 3px;
+}
+form.form-condensed .control-group {
+  margin-bottom: 10px;
+}
+form .control-actions {
+  margin-top: 20px;
+}
+form .control-first {
+  margin-top: 25px;
+}
+form .controls-row span {
+  display: inline-block;
+  margin-top: 2px;
+  vertical-align: middle;
+}
+label.error {
+  display: none !important;
+}
+label.inline {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-top: 5px;
+  vertical-align: middle;
+}
+input.error, select.error {
+  border-color: #e9322d;
+}
+input.input-dotted {
+  border-color: -moz-use-text-color -moz-use-text-color #ccc;
+  border-radius: 0;
+  border-style: none none dotted;
+  border-width: medium medium 1px;
+  box-shadow: none;
+  transition: none 0s ease 0s ;
+}
+input.input-dotted:focus {
+  border-color: #666;
+  box-shadow: none;
+}
+table td.total {
+  border-top: 2px solid #333;
+}
+table.table-borderless td {
+  border: medium none;
+}
+i.icon-gray {
+  opacity: 0.9;
+}
+a.a-danger {
+  color: #cd0000;
+  text-decoration: underline;
+}
+a.a-small {
+  font-size: small;
+  font-style: italic;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.navbar {
+  margin-bottom: 0;
+}
+.navbar .brand {
+  padding: 5px 20px;
+}
+
+
+
+.navbar-inner {
+  border-radius: 0 0 4px 4px;
+  border-top: 0 none;
+}
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+  background-color: transparent;
+  border-bottom: 3px solid #e07e57;
+  box-shadow: none;
+  color: #d06e47;
+  padding-bottom: 8px;
+}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background-color: #e07e57;
+  background-image: linear-gradient(to bottom, #e08561, #e17347);
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
+  background-color: #e07e57;
+  background-image: linear-gradient(to bottom, #e08561, #e17347);
+}
+.alert {
+  margin: 5px 5px 10px;
+}
+.btn-timeneye {
+  background-color: #e07e57;
+  background-image: linear-gradient(to bottom, #e08561, #e17347);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.btn-timeneye:active {
+  color: rgba(255, 255, 255, 0.75);
+}
+.btn-timeneye:hover, .btn-timeneye:focus, .btn-timeneye:active, .btn-timeneye.active, .btn-timeneye.disabled, .btn-timeneye[disabled] {
+  background-color: #e17347;
+  color: #ffffff;
+}
+.btn-pad50 {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.btn-pad75 {
+  padding-left: 75px;
+  padding-right: 75px;
+}
+.btn-icon {
+  padding: 3px;
+}
+.dmAlert {
+}
+.dmAlertItem {
+  border-radius: 0 0 5px 5px !important;
+}
+.teSidebar {
+}
+.teSidebarBlock {
+}
+.teSidebarHeader {
+  border-bottom: 1px solid #cccccc;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+
+
+
+h3 {
+  font-size: 24.5px;
+}
+h1, h2, h3 {
+  line-height: 40px;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  margin: 10px 0;
+  text-rendering: optimizelegibility;
+}
+body {
+  color: #333333;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+html {
+  font-size: 100%;
+}
+
+

@@ -1,12 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "custom";
+@import "common";
 
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "bootstrap-datepicker";
-@import "common";
+
+
+
+
 
 /* User sign in and sign forms. */
 .border-form-div {
@@ -205,10 +209,7 @@ h1 {color: rgb(0, 0, 139);}
     background-color: #c00;
     color: #fff;
   }
-  ul li {
-    font-size: 12px;
-    list-style: square;
-  }
+
 }
 @media print {
   body {
@@ -230,11 +231,6 @@ h1 {color: rgb(0, 0, 139);}
     display: none;
   }
   }
-  #text_area {
-  width: 300px;
-  height: 150px;
-  }
-
 
 
 
