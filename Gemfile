@@ -6,7 +6,7 @@ ruby '2.3.1'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 source 'https://rubygems.org'
-gem 'mysql2', '~> 0.3.20'
+gem 'mysql', '~> 2.9', '>= 2.9.1'
 gem 'axlsx_rails', '~> 0.4.0'
 gem 'axlsx', '~> 2.0'
 gem 'acts_as_xlsx', '~> 1.0', '>= 1.0.6'
